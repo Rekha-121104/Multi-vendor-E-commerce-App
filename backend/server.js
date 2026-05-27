@@ -14,8 +14,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://multi-vendor-e-commerce-app.netlify.app/'
+    'https://multi-vendor-e-commerce-app.netlify.app'
   ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
 app.use(morgan('dev'));
